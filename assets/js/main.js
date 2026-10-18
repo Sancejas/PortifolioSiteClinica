@@ -128,13 +128,13 @@ const TREATMENTS_DATA = {
   }
 };
 
-/* --- 0. HERO SLIDESHOW (5 IMAGENS COM TRANSIÇÃO EM FADE A CADA 5 SEGUNDOS) --- */
+/* --- 0. HERO SLIDESHOW (5 IMAGENS COM TRANSIÇÃO EM FADE A CADA 3 SEGUNDOS) --- */
 function initHeroSlideshow() {
   const slides = document.querySelectorAll('.hero-slide');
   if (!slides.length) return;
 
   let currentIndex = 0;
-  const slideDuration = 5000; // Exatamente 5 segundos por imagem
+  const slideDuration = 3000; // 3 segundos por imagem
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
@@ -152,7 +152,7 @@ function initHeroSlideshow() {
     showSlide(nextIndex);
   }
 
-  // Inicializa o primeiro slide e transiciona continuamente a cada 5s
+  // Inicializa o primeiro slide e transiciona continuamente a cada 3s
   showSlide(0);
   setInterval(nextSlide, slideDuration);
 }
